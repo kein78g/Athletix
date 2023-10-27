@@ -1,0 +1,140 @@
+.body-slider{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    justify-self: center;
+    align-items: center;
+}
+.sliders {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 500px;
+    height: 312px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide {
+    width: 500%;
+    height: 312px;
+    display: flex;
+}
+
+.slide input{
+    display: none;
+}
+
+.st {
+    width: 20%;
+    transition: 2s;
+}
+
+.st img {
+    width: 500px;
+    height: 312px;
+}
+
+.navi-m {
+    position: absolute;
+    width: 500px;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+}
+
+.m-btn{
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.m-btn:not(:last-child){
+    margin-right: 30px;
+}
+
+.m-btn:hover{
+background-color: var(--primary-color);
+}
+
+#radio1:checked ~.first {
+    margin-left: 0;
+}
+#radio2:checked ~.first {
+    margin-left: -20%;
+}
+#radio3:checked ~.first {
+    margin-left: -40%;
+}
+#radio4:checked ~.first {
+    margin-left: -60%;
+}
+
+.navi-auto {
+    position: absolute;
+    width: 500px;
+    margin-top: 287px;
+    display: flex;
+    justify-content: center;
+}
+
+.navi-auto section {
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navi-auto section:not(:last-child) {
+    margin-right: 30px;
+    justify-content: center;
+}
+
+#radio1:checked ~ .navi-auto .a-b1 {
+    background-color: var(--primary-color);
+}
+#radio2:checked ~ .navi-auto .a-b2 {
+    background-color: var(--primary-color);
+}
+#radio3:checked ~ .navi-auto .a-b3 {
+    background-color: var(--primary-color);
+}
+#radio4:checked ~ .navi-auto .a-b4 {
+    background-color: var(--primary-color);
+}
+
+@media (min-width: 950px){
+    .slider {
+        width: 800px;
+        height: 500px;
+    }
+    
+    .slide {
+        width: 500%;
+        height: 500px;
+        display: flex;
+    }
+    
+    .st img {
+        width: 800px;
+        height: 500px;
+    }
+    
+    .navi-m {
+        width: 800px;
+        margin-top: -40px;
+    }
+
+    .navi-auto {
+        width: 800px;
+        margin-top: 460px;
+    }
+}
